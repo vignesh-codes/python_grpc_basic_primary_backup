@@ -43,7 +43,7 @@ python -m grpc_tools.protoc -I=. --python_out=. --grpc_python_out=. heartbeat_se
 This monitors the primary and backups for failures:
 
 ```sh
-python heartbeat_service.py
+python heartbeat_service.py # Runs on port 50053
 ```
 
 ### 2️⃣ Start Backup Servers
