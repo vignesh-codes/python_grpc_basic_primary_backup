@@ -19,7 +19,7 @@ class Backup(replication_pb2_grpc.SequenceServicer):
 
         # Store locally
         self.data_store[request.key] = request.value
-        with open("backup1.txt", "a") as log_file:
+        with open("backup.txt", "a") as log_file:
             log_file.write(f"{request.key} {request.value}\n")
 
         return replication_pb2.WriteResponse(ack="Backup write successful")  
