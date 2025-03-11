@@ -8,14 +8,14 @@ Additionally, a **heartbeat service** monitors the availability of the primary a
 ---
 
 ## 📁 Project Structure  
-── client.py # Client sends key-value writes to the primary │
-── primary.py # Primary server (port 50051) │ that forwards writes to backups │
-── backup.py # First backup server (port 50052) │
-── backup2.py # Second backup server (port 50050) │
-── heartbeat_service.py # Heartbeat server (post 50053) monitoring primary & backups │
-── replication.proto # gRPC service definition for primary-backup communication │
-── heartbeat_service.proto # gRPC service definition for heartbeat monitoring │
-── requirements.txt # List of required Python packages │
+── client.py # Client sends key-value writes to the primary │ \
+── primary.py # Primary server (port 50051) │ that forwards writes to backups │ \
+── backup.py # First backup server (port 50052) │ \
+── backup2.py # Second backup server (port 50050) │ \
+── heartbeat_service.py # Heartbeat server (post 50053) monitoring primary & backups │ \
+── replication.proto # gRPC service definition for primary-backup communication │ \
+── heartbeat_service.proto # gRPC service definition for heartbeat monitoring │ \
+── requirements.txt # List of required Python packages │ \
 ── README.md 
 
 
@@ -43,7 +43,7 @@ python -m grpc_tools.protoc -I=. --python_out=. --grpc_python_out=. heartbeat_se
 This monitors the primary and backups for failures:
 
 ```sh
-python heartbeat_service.py
+python heartbeat_service.py # Runs on port 50053
 ```
 
 ### 2️⃣ Start Backup Servers
