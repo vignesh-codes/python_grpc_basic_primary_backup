@@ -85,10 +85,10 @@ Response from primary: Write successful
 
 ### 📄 Log Files
 
-client.txt ->   Stores client write requests
-primary.txt ->	Stores committed writes by primary
-backup.txt ->	Stores received writes by backup1
-backup2.txt ->	Stores received writes by backup2
+client.txt ->   Stores client write requests \
+primary.txt ->	Stores committed writes by primary \
+backup.txt ->	Stores received writes by backup1 \
+backup2.txt ->	Stores received writes by backup2 \
 heartbeat.txt ->  Tracks alive/down services
 
 ### 💡 Example heartbeat.txt Log
